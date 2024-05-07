@@ -43,7 +43,7 @@ Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 
 
 class Solution {
-    public int getval(char ch)
+    public int getval(char ch)   // to achieve the roman to integer value
     {
         switch(ch)
         {
@@ -58,15 +58,15 @@ class Solution {
         return 0;
     }
     public int romanToInt(String s) {
-        int n = s.length();
+        int n = s.length();    // length of the string
         int sum=0;
         for(int i=0;i<n;i++)
         {
-            char ch1 = s.charAt(i);
-            if((i+1<n)&& getval(ch1) < getval(s.charAt(i+1)))
-               sum = sum-getval(ch1);
+            char ch1 = s.charAt(i);  // to get the every single character in the string
+            if((i+1<n)&& getval(ch1) < getval(s.charAt(i+1)))  // checking the current is less then next one
+               sum = sum-getval(ch1);  // to decrease the sum
             else
-               sum = sum+ getval(ch1);
+               sum = sum+ getval(ch1); // to increasee the sum
         }
 
         return sum;
