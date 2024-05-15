@@ -24,12 +24,12 @@ class Solution {
     public void moveZeroes(int[] nums) {
         int n=0,i=0;
        while( i < nums.length){
-        if(nums[i]!=0){
+        if(nums[i]!=0){      // to check every element is zero or not if it not zero assign with the nums array
             nums[n] = nums[i];
             n++;}
             i++;
         }
-        while(n < nums.length){
+        while(n < nums.length){   balance the element filled with zero
             nums[n] = 0;
             n++;
         }
