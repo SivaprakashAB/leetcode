@@ -37,26 +37,26 @@ class Solution {
         if(nums.length==0||nums.length<3) 
           return new ArrayList<>();
 
-        Arrays.sort(nums);
-        Set<List<Integer>> ans = new HashSet<>();
+        Arrays.sort(nums);   // arrays sorted
+        Set<List<Integer>> ans = new HashSet<>();  // create a hashset to verify the sum is already getting or not
         for(int i=0; i<nums.length-2; i++)
         {
-            int left = i+1;
-            int right = nums.length-1;
+            int left = i+1;      // this to get the 1 st position of given array
+            int right = nums.length-1;   // this is to get the last element of the given array
 
             while(left<right){
-                int total = nums[i] + nums[left] + nums[right];
+                int total = nums[i] + nums[left] + nums[right];  // to sum the 3 numbers
                 if(total == 0 ){
-                    ans.add(Arrays.asList(nums[i],nums[left],nums[right]));
+                    ans.add(Arrays.asList(nums[i],nums[left],nums[right]));  // the total equals to zero then add
                     left++;
                     right--;
                 }
-                else if(total < 0)
+                else if(total < 0)   //total have less than 0 to increase the left
                    left++;
                 else
-                   right--;
+                   right--;   // else to decrease the right
             }
         }
-        return new ArrayList(ans);
+        return new ArrayList(ans);  // the new arraylist which have the ans array
     }
 }
