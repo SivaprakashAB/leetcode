@@ -25,17 +25,17 @@
 
   class Solution {
     public int maxProfit(int[] prices) {
-        int min = Integer.MAX_VALUE;
+        int min = Integer.MAX_VALUE;  // initialize the min with Max value
         int profit =0;
         for(int i=0;i<prices.length;i++)
         {
-            if(min > prices[i])
+            if(min > prices[i])  // to check the elements which smaller than the min
             {
-                min = prices[i];
+                min = prices[i];  // assign the element to min
             }
-            else if(profit < prices[i]-min)
+            else if(profit < prices[i]-min)  //to check the complicity of the min and current element with profit
             {
-                profit = prices[i] - min;
+                profit = prices[i] - min;  // profit assign with the compliment
             }
         }
         return profit;
