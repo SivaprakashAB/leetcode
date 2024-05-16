@@ -32,8 +32,8 @@ class Solution {
         int maxArea = 0;
 
         while(left < right){
-            int Area = Math.min(height[left],height[right]) * (right-left);
-            maxArea = Math.max(Area,maxArea);
+            int Area = Math.min(height[left],height[right]) * (right-left);  //to get the area of the rectangle
+            maxArea = Math.max(Area,maxArea);                                // to assign the max value to the maxArea
             if(height[left] < height[right])
                 left++;
             else 
