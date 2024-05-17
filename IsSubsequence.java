@@ -20,22 +20,22 @@
 
 class Solution {
     public boolean isSubsequence(String s, String t) {
-        int len = t.length();
+        int len = t.length();  // to get the length of the full string to initialize to len variable
         int j=0,i=0;
-        if(s.length()>=1){
-        while(j<s.length()&&i<t.length())
+        if(s.length()>=1){   // only to to find element is more the eqaul to 1 
+        while(j<s.length()&&i<t.length())  // tp check the find and given string length
         {
-            if(t.charAt(i)==s.charAt(j))
+            if(t.charAt(i)==s.charAt(j))  // tp check the find and given string element is same
             {
-               j++;i++;
+               j++;i++;   // if it is same to increase the both i and j
             }
             else
             {
-                i++;
+                i++; //if not to increase only the given string not find string
             }
         }   
-        if(j==s.length())
-            return true;
+        if(j==s.length())  // to check the j reach to the find string length then the given string have the full string within.
+            return true;  // to return true;
         else
            return false;}
            return true;
