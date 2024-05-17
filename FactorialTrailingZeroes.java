@@ -26,7 +26,7 @@
       while(n>0)
       {
         n = n/5;        // every interval of 5 number increase the number of zero  +1, so divided 5 commonly
-        result += n;
+        result = result +  n;
       }
       return result;
     }
