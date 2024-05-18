@@ -32,32 +32,32 @@ class Solution {
     int n = nums.length;
       m=0;
       if(k>n){
-      k = k-n;}
+      k = k-n;
+      }
       if(n>1){
-        if((k%2==1)&&(n==2))   
+        if((k%2==1)&&(n==2))    // to check the length of the given array is 2 elements only and k is odd
         {
            int temp = nums[0];
             nums[0] = nums[1];
             nums[1] = temp;
         }
-        else if((k%2==0)&&(n==2)){
+        else if((k%2==0)&&(n==2)){   //to check the length of the given array is 2 elements only and k is even
             nums[0] = nums[0];
             nums[1] = nums[1];
         }
         else{
       for(int i=n-k;i<n;i++)
         {
-            num[m] = nums[i];
-            
+            num[m] = nums[i];  // take the last 3 element only to assign to another array
             m++;
         }
-        for(int i=n-k-1;i>=0;i--)
+        for(int i=n-k-1; i>=0; i--)
         {
-            nums[i+k] = nums[i];
+            nums[i+k] = nums[i];  // to assign the 1,2,3,4,5,6 k=3 then _,_,_,1,2,3
         }
         for(int i=0;i<k;i++)
         {
-            nums[i] = num[i];
+            nums[i] = num[i];  // to assign the 4,5,6 in the front of the array
         }
     }}
     }
