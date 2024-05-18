@@ -52,13 +52,13 @@ class Solution {
         int i=0,j=0;
         while(i<len)
         {
-            if(nums[i]!=val)
+            if(nums[i]!=val) // top check the element is not 
             {
-                nums[j] = nums[i];
+                nums[j] = nums[i];  // if the value not equal to target then to assign same array;
                 j++;
             }
             i++;
         }
-        return j;
+        return j;  // return the j value
     }
 }
