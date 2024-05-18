@@ -28,7 +28,7 @@
 
 class Solution {
     public boolean isValid(String s) {
-        Stack<Character> stack = new Stack<>();
+        Stack<Character> stack = new Stack<>();  //create a stack to check the string
         for(char c : s.toCharArray())
         {
             if(c=='{')
@@ -38,7 +38,7 @@ class Solution {
             else if(c=='(')
                 stack.push(')');
             else if(stack.isEmpty() || stack.pop()!=c)
-               return false;
+               return false;  // return the false 
         }
         return stack.isEmpty();
     }
