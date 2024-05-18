@@ -23,13 +23,13 @@
   class Solution {
     public boolean canJump(int[] nums) {
       int last = nums.length-1;
-      for(int i=nums.length-1;i>=0;i--)
+      for(int i=nums.length-2; i>=0; i--)   // to start with the last before element to  check the last element 
       {
-        if(i+nums[i]>=last)
+        if(i+nums[i]>=last)   // to check the current index reach the last index
         {
-            last = i;
+            last = i;  // if yes to change the last index to current index
         }
       }
-      return last==0;
+      return last==0;  //to return if the last index reach the first index or not
     }
 }
