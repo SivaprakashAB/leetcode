@@ -27,19 +27,19 @@
  class Solution {
     public int mySqrt(int x) {
         long low =0,high=x,ans=0;
-        while(low<=high)
+        while(low<=high) 
         {
-            long mid = (low+high)/2;
-            if(mid*mid==x)
+            long mid = (low+high)/2;  // to get the middle value of the given number
+            if(mid*mid == x)  //check its mid * mid == value
               return (int)mid;
-            else if(mid*mid<x)
+            else if(mid*mid < x)  // if the mid * mid value less than given x then increase the low and ans = mid
             {
                 low = mid+1;
                 ans = mid;
             }
             else
             {
-                high = mid-1;
+                high = mid-1;  //else to decrease ethe high value
             }
         }
         return (int)ans;
