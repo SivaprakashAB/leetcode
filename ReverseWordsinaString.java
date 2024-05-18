@@ -31,13 +31,13 @@
 
   class Solution {
     public String reverseWords(String s) {
-        String[] word = s.split(" +");
-        StringBuilder sb = new StringBuilder();
+        String[] word = s.split(" +");  // to split the string into words
+        StringBuilder sb = new StringBuilder();  //using string builder to modify the string
         for(int i=word.length-1;i>=0;i--)
         {
-            sb.append(word[i]);
+            sb.append(word[i]);  // to append last word in the string
             sb.append(" ");
         }
-        return sb.toString().trim();
+        return sb.toString().trim();  // trim() to delete first and last extra spaces also to change the strtingbuilder ot string
     }
 }
