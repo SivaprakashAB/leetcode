@@ -46,7 +46,7 @@
 
 class Solution {
     public String intToRoman(int num) {
-        String roman="";                                     //to create a string with their initialization 
+        String roman="";                                        //to create a string with their initialization 
         String[] str = {"M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"}; // to give all possible romans
         int[] inte = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9,5,4,1};           // same give all possible integers
         for(int pos=0; num>0 ; ++pos)
