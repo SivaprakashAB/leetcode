@@ -35,7 +35,7 @@ class Solution {
         int right = len-1;
         while(left<right)
         {
-            if(s.charAt(left) == s.charAt(right)){
+            if(s.charAt(left) == s.charAt(right)){ // to check the first and last elements and next same
             left++;
             right--;}
             else
