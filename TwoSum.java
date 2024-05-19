@@ -32,7 +32,7 @@
        Map<Integer,Integer> map = new HashMap<>();
        for(int i=0;i<nums.length;i++)
        {
-            int compilment = target - nums[i];
+            int compilment = target - nums[i];   // to find the complicated number
             if(map.containsKey(compilment))
             {
                 return new int[]{map.get(compilment),i};
