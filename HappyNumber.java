@@ -32,17 +32,17 @@ class Solution {
 
   public boolean isHappy(int n) {
 
-    HashSet<Integer> ans = new HashSet<>();
+    HashSet<Integer> ans = new HashSet<>();  // new create the hash set 
     int sum =0;
-    while (sum!=1 && !ans.contains(sum)) {
+    while (sum!=1 && !ans.contains(sum)) { // to check the sum is not equal to 1 and also it is not contain before
         ans.add(sum);
         sum = 0;
          while (n != 0) {
-        sum += Math.pow(n % 10, 2);
+        sum += Math.pow(n % 10, 2);  // to get the each degit square in the sum
         n = n / 10;
       }
       n = sum;
     }
-    return sum==1;
+    return sum==1;  // if the sum equal to 1 then reutrn true else false
   }
 }
