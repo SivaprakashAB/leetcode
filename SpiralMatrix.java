@@ -21,9 +21,9 @@
 
 class Solution {
     public List<Integer> spiralOrder(int[][] matrix) {
-         List<Integer> res = new ArrayList<>();
+         List<Integer> res = new ArrayList<>();  // to create arraylist
 
-    if (matrix.length == 0) {
+    if (matrix.length == 0) {  // first to check the matrix length is 0 then return res ;
       return res;
     }
 
@@ -33,29 +33,25 @@ class Solution {
     int colEnd = matrix[0].length - 1;
 
     while (rowBegin <= rowEnd && colBegin <= colEnd) {
-      // Traverse Right
-      for (int j = colBegin; j <= colEnd; j++) {
+      for (int j = colBegin; j <= colEnd; j++) {   // Traverse Right
         res.add(matrix[rowBegin][j]);
       }
       rowBegin++;
 
-      // Traverse Down
-      for (int j = rowBegin; j <= rowEnd; j++) {
+      for (int j = rowBegin; j <= rowEnd; j++) {   // Traverse Down
         res.add(matrix[j][colEnd]);
       }
       colEnd--;
 
       if (rowBegin <= rowEnd) {
-        // Traverse Left
-        for (int j = colEnd; j >= colBegin; j--) {
+        for (int j = colEnd; j >= colBegin; j--) {    // Traverse Left
           res.add(matrix[rowEnd][j]);
         }
       }
       rowEnd--;
 
       if (colBegin <= colEnd) {
-        // Traverse Up
-        for (int j = rowEnd; j >= rowBegin; j--) {
+        for (int j = rowEnd; j >= rowBegin; j--) {    // Traverse Up
           res.add(matrix[j][colBegin]);
         }
       }
